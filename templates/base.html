@@ -14,7 +14,7 @@
     <script src="https://kit.fontawesome.com/571177c30f.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <link rel="stylesheet" href="{% static "custom.css" %}">
-      <script>
+      {% comment %} <script>
       $(document).ready(function () {
         // Handle header click
         $('.card-header').click(function () {
@@ -27,6 +27,29 @@
           content.collapse('toggle');
         });
       });
+      </script> {% endcomment %}
+      <script>
+        $(document).ready(function () {
+          // Handle card header button click
+          $('.card-header button').click(function () {
+            // Toggle the rotation class for the clicked button's icon
+            const icon = $(this).find('.icon');
+            icon.toggleClass('rotate');
+          });
+      
+          // Update the icon rotation when a card is collapsed/expanded
+          $('#resume').on('hidden.bs.collapse', function (e) {
+            const targetButton = $(e.target).prev().find('button');
+            const icon = targetButton.find('.icon');
+            icon.removeClass('rotate');
+          });
+      
+          $('#resume').on('shown.bs.collapse', function (e) {
+            const targetButton = $(e.target).prev().find('button');
+            const icon = targetButton.find('.icon');
+            icon.addClass('rotate');
+          });
+        });
       </script>
 </head>
 <body class="container">
