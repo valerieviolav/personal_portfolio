@@ -1,12 +1,26 @@
 
 {% extends "base.html" %}
+{% load static %}
 
 {% block page_content %}
 <!-- pages/templates/pages/home.html -->
-    <h2>Past Adventures</h2>
+<div class="px-4 py-5 my-5 text-center">
+  <div class="d-flex flex-column align-items-center">
+    <div class="rounded-circle image-crop" style="background-image: url('{% static 'cover.jpeg' %}');"></div>
+      <h1 class="display-5 fw-bold text-body-emphasis" id="contact-h1">Hi! I'm Valerie.</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Thanks for visiting! I've helped over 100 companies with <strong>business operations efficiency</strong>, <strong>talent development</strong>, and <strong>technology solutions</strong>. Check out some of my past work experience below as well as my portfolios.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <a href="#" class="btn btn-primary btn-lg px-4 gap-3" id="contact">Contact Me</a>
+        </div>
+      </div>
+  </div>
+</div>
+<!--Begin Resume-->
+<h2>Past Adventures</h2>
 
     <div class="accordion" id="resume">
-      <!-- Technical Training Card -->
+      <!-- Training Card -->
         <div class="card">
           <div class="card-header" id="headingOne">
             <h2 class="mb-0">
@@ -18,31 +32,52 @@
           <div id="collapseOne" class="collapse" data-parent="#resume">
             <div class="card-body">
               <ul class="resume-list">
-                <li class="resume-list-item" id="li-training"><span style="padding-left: 20px;">Some text</span></li>
-                <li class="resume-list-item" id="li-training"><span style="padding-left: 20px;">Some text</span></li>
+                <li class="resume-list-item" id="li-training"><span style="padding-left: 20px;">I&apos;ve trained more than 200 individuals in technical support, low-code/no-code software development, sales, and customer service in results-based development programs.</span></li>
+                <li class="resume-list-item" id="li-training"><span style="padding-left: 20px;">I&apos;ve designed training for talent development, change management, product training, and operational enablement.</span></li>
               </ul>
             </div>
           </div>
         </div>
-        <!-- End of Technical Training Card -->
-        <!-- Training Card -->
+        <!-- End of Training Card -->
+        <!-- Technical Card -->
         <div class="card">
           <div class="card-header" id="headingTwo">
             <h2 class="mb-0">
               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo">
-                <i class="icon fas fa-chevron-right"></i> Corporate Training
+                <i class="icon fas fa-chevron-right"></i> Technical Support &amp; Engineering
               </button>
             </h2>
           </div>
           <div id="collapseTwo" class="collapse" data-parent="#resume">
             <div class="card-body">
               <ul class="resume-list">
-                <li class="resume-list-item" id="li-training"><span style="padding-left: 20px;">Some text</span></li>
-                <li class="resume-list-item" id="li-training"><span style="padding-left: 20px;">Some text</span></li>
+                <li class="resume-list-item" id="li-technical"><span style="padding-left: 20px;">As a Technical Consultant, I provided comprehensive technical support and enablement to over 300 businesses, ranging from small businesses to enterprises.</span></li>
+                <li class="resume-list-item" id="li-technical"><span style="padding-left: 20px;">I&apos;ve developed custom tools, and integrated commercial enterprise and open source software to ensure my clients have the tools they need to get things done.</span></li>
+                <li class="resume-list-item" id="li-technical"><span style="padding-left: 20px;">I&apos;ve serviced and supported desktop computers, servers, access control systems, and IoT devices for various purposes, including electric vehicle charging equipment - maintaining both hardware and software.</span></li>
+                
               </ul>
             </div>
           </div>
         </div>
-        <!-- End of Training Card -->
+        <!-- End of Technical Card -->
+         <!-- business Card -->
+         <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                <i class="icon fas fa-chevron-right"></i> Technical Support &amp; Engineering
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" data-parent="#resume">
+            <div class="card-body">
+              <ul class="resume-list">
+                <li class="resume-list-item" id="li-business"><span style="padding-left: 20px;">In my career as a hotel manager I specialized in recovering underperforming properties, overseeing improvements to operational efficiency, revenue, and several full-scale renovations.</span></li>
+                <li class="resume-list-item" id="li-business"><span style="padding-left: 20px;">In my roles as both a trainer and a technology consultant I’ve been able to apply my business accumen to not only perform tasks as assigned, but innovate and consult with stakeholders to achieve organizational goals. </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End of business Card -->
       </div>
 {% endblock page_content %}
