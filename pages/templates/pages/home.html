@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+
+{% block page_content %}
+<!-- pages/templates/pages/home.html -->
+    <h2>Past Adventures</h2>
+
+    <div class="accordion" id="resume">
+      <!-- Technical Training Card -->
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                <i class="icon fas fa-chevron-right"></i> Technical Training
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse" data-parent="#resume">
+            <div class="card-body">
+              <ul class="resume-list">
+                <li class="resume-list-item" id="li-training"><span style="padding-left: 20px;">Some text</span></li>
+                <li class="resume-list-item" id="li-training"><span style="padding-left: 20px;">Some text</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End of Technical Training Card -->
+        <!-- Training Card -->
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                <i class="icon fas fa-chevron-right"></i> Corporate Training
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" data-parent="#resume">
+            <div class="card-body">
+              <ul class="resume-list">
+                <li class="resume-list-item" id="li-training"><span style="padding-left: 20px;">Some text</span></li>
+                <li class="resume-list-item" id="li-training"><span style="padding-left: 20px;">Some text</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End of Training Card -->
+      </div>
+{% endblock page_content %}
