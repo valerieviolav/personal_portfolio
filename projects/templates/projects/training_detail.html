@@ -1,0 +1,34 @@
+<!-- projects/templates/projects/project_detail.html -->
+
+{% extends "base.html" %}
+
+{% block page_content %}
+<h1>{{ training.title }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        {% if project.image %}
+            <img src="{{ training.image.url }}" width="100%">
+        {% endif %}
+    </div>
+    <div class="col-md-4">
+        <h5>About the project:</h5>
+        <p>{{ training.description }}</p>
+        <br>
+        <h5>Technology used:</h5>
+        <p>{{ training.technology }}</p>
+        {% if training.file %}
+            {% if '.pdf' in training.filename %}
+            <a href="{{ training.file.url }}" target="_blank" class="btn btn-primary d-inline-flex align-items-center" role="button">
+                <i class="fa-solid fa-file-pdf"></i>
+                View PDF
+            </a>
+            {% else %}
+            <a href="{{ training.file.url }}" download class="btn btn-primary d-inline-flex align-items-center" role="button">
+                <i class="fa-solid fa-download"></i>
+                Download File
+            </a>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+{% endblock page_content %}

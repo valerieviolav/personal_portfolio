@@ -1,0 +1,26 @@
+<!-- projects/templates/projects/project_index.html -->
+
+{% extends "base.html" %}
+
+{% block page_content %}
+<h1>Training Portfolio</h1>
+<div class="row">
+{% for training in trainings %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            {% if project.image %}
+                <img class="card-img-top" src="{{ training.image.url }}">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ training.title }}</h5>
+                <p class="card-text">{{ training.description }}</p>
+                <a href="{% url 'training_detail' training.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

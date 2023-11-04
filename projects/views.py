@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from projects.models import Project
+from projects.models import Project, Training
 
 # Create your views here.
 def project_index(request):
@@ -17,15 +17,16 @@ def project_detail(request, pk):
     return render(request, "projects/project_detail.html", context)
 
 def training_index(request):
-    projects = Project.objects.all()
+    trainings = Training.objects.all()
     context = {
-        "projects": projects
+        "trainings": trainings
     }
-    return render(request, "projects/project_index.html", context)
+    return render(request, "projects/training_index.html", context)
 
 def training_detail(request, pk):
-    project = Project.objects.get(pk=pk)
+    training = Training.objects.get(pk=pk)
     context = {
-        "project": project 
+        "training": training 
     }
-    return render(request, "projects/project_detail.html", context)
+    print(f"Filename is: {training.filename}")
+    return render(request, "projects/training_detail.html", context)
