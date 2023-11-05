@@ -28,5 +28,4 @@ def training_detail(request, pk):
     context = {
         "training": training 
     }
-    print(f"Filename is: {training.filename}")
     return render(request, "projects/training_detail.html", context)

@@ -1,0 +1,89 @@
+* {
+    background-color: #333;
+    color: #fff;
+}
+
+body {
+    background-color: #333; 
+    color: #fff !important;
+  }
+  /* .nav-pills .nav-item .nav-link:active {
+      color: #000;
+      background-color: #fff;
+  } */
+  .nav-link {
+      color: #fff;
+  }
+  .rounded-circle {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+  }
+
+  .image-crop {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url('{% static 'cover.jpeg' %}');
+    background-size: cover;
+    background-position: center;
+  }
+  #contact-h1 {
+    color: #fff !important;
+  }
+  #contact {
+    background-color: #fff;
+    color:black;
+    border-color: #fff;
+  }
+  footer .text-body-secondary {
+      color: #fff !important;
+  }
+  .accordion .card {
+    background-color: #333;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+  }
+   .btn-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  .btn-link:hover, .btn-link:active, .nav-item:hover, .nav-link:hover, .nav-link:focus {
+    color: #F86C6C;
+  }
+  .icon {
+      transition: transform 0.3s;
+    }
+    
+    .icon.rotate {
+      transform: rotate(90deg);
+    }
+    .resume-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+    .resume-list-item {
+        padding-bottom: 20px;
+    }
+      
+    #li-training::before {
+        content: "\e53d"; 
+        font-family: "Font Awesome 6 Free"; 
+        margin-right: 5px; 
+        font-weight: 900;
+      }
+    #li-technical::before {
+      content: "\f120"; 
+      font-family: "Font Awesome 6 Free"; 
+      margin-right: 5px; 
+      font-weight: 900;
+    }
+    #li-business::before {
+      content: "\e522"; 
+      font-family: "Font Awesome 6 Free"; 
+      margin-right: 5px; 
+      font-weight: 900;
+    }
+
