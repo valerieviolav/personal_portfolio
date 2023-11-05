@@ -3,6 +3,7 @@
 {% extends "base.html" %}
 
 {% block page_content %}
+{% load text_filters %}
 <h1>Training Portfolio</h1>
 <div class="row">
 {% for training in trainings %}
@@ -13,7 +14,7 @@
             {% endif %}
             <div class="card-body">
                 <h5 class="card-title">{{ training.title }}</h5>
-                <p class="card-text">{{ training.description }}</p>
+                <p class="card-text">{{ training.description|abbreviate:50 }}</p>
                 <a href="{% url 'training_detail' training.pk %}"
                    class="btn btn-primary">
                     Read More
