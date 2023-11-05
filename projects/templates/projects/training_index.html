@@ -8,7 +8,7 @@
 {% for training in trainings %}
     <div class="col-md-4">
         <div class="card mb-2">
-            {% if project.image %}
+            {% if training.image %}
                 <img class="card-img-top" src="{{ training.image.url }}">
             {% endif %}
             <div class="card-body">
